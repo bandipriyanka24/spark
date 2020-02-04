@@ -2,7 +2,7 @@ Run the following commands in the hive console to enable the udf.
 
 hdfs dfs put <project-home>/target/edureka-udf*.jar edureka-udf.jar
 
-hive> add JAR edureka-udf.jar
+hive> add jar edureka-udf.jar
 hive> create temporary function home_team_scored as "com.edureka.hive.udf.SoccerUDF" using JAR 'edureka-udf.jar';
 hive> create temporary function find_winner as "com.edureka.hive.udf.SoccerWinnerUDF" using JAR 'edureka-udf.jar';
 
